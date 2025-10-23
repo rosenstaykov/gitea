@@ -13,8 +13,8 @@ services:
       - key: GITEA__database__DB_TYPE
         value: sqlite3
       - key: GITEA__server__DOMAIN
-        value: gitea.onrender.com
+        value: gitea-hmif.onrender.com
       - key: GITEA__server__ROOT_URL
-        value: https://gitea.onrender.com/
+        value: https://gitea-hmif.onrender.com/
       - key: GITEA__server__HTTP_PORT
         value: 3000
