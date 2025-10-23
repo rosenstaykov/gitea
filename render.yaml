@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: gitea
+    env: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    autoDeploy: true
+    envVars:
+      - key: USER_UID
+        value: 1000
+      - key: USER_GID
+        value: 1000
+      - key: GITEA__database__DB_TYPE
+        value: sqlite3
+      - key: GITEA__server__DOMAIN
+        value: gitea.onrender.com
+      - key: GITEA__server__ROOT_URL
+        value: https://gitea.onrender.com/
+      - key: GITEA__server__HTTP_PORT
+        value: 3000
