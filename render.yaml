@@ -36,5 +36,6 @@ services:
       - key: GITEA__server__HTTP_PORT
         value: 3000
 
-      # Optional: keep-alive cron can hit this URL every 10 minutes
-      # (not part of YAML, just a suggestion for uptime)
+      # Skip initial setup by marking Gitea as installed
+      - key: GITEA__app__INSTALL_LOCK
+        value: true
