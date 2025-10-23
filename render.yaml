@@ -39,3 +39,12 @@ services:
       # Skip initial setup by marking Gitea as installed
       - key: GITEA__app__INSTALL_LOCK
         value: true
+
+    # Persistent storage for Gitea
+    mounts:
+      - type: volume
+        name: gitea-data
+        mountPath: /data
+      - type: volume
+        name: gitea-logs
+        mountPath: /logs
