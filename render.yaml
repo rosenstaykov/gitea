@@ -22,9 +22,9 @@ services:
       - key: GITEA__database__NAME
         value: defaultdb
       - key: GITEA__database__USER
-        value: avnadmin
+        value: $GITEA_DB_USER
       - key: GITEA__database__PASSWD
-        value: AVNS_fcD_2dQcRcM7hKDL-lg
+        value: $GITEA_DB_PASS
       - key: GITEA__database__SSL_MODE
         value: require
 
